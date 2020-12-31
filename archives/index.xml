@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文章 on PODW</title>
-    <link>https://PODW.github.io/archives/</link>
+    <link>https://podw.github.io/github.io/archives/</link>
     <description>Recent content in 文章 on PODW</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-hant</language><atom:link href="https://PODW.github.io/archives/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-hant</language><atom:link href="https://podw.github.io/github.io/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
