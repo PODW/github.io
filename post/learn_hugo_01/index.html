@@ -29,10 +29,16 @@
 <meta name="description" content="A blog for PODW website." />
 
 
-<meta name="keywords" content="Hugo" />
+<meta name="keywords" content="Hugo, 網站架設" />
 
 <meta property="og:title" content="Hugo 學習日誌01" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="
+本站是透過Hugo這個靜態網站生成器製作而成的
+網路上還有其他的靜態網站生成器
+而我會選擇用Hugo的原因就是因為它安裝簡單生成快速
+我這裡只記錄怎麼用Hugo製作靜態網站跟我遇到的問題
+其他更詳細的內容請再上網搜尋
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://podw.github.io/github.io/post/learn_hugo_01/" />
 <meta property="og:image" content="https://podw.github.io/github.io/img/og.png"/>
@@ -43,7 +49,13 @@
 <meta name="twitter:image" content="https://podw.github.io/github.io/img/og.png"/>
 
 <meta name="twitter:title" content="Hugo 學習日誌01"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="
+本站是透過Hugo這個靜態網站生成器製作而成的
+網路上還有其他的靜態網站生成器
+而我會選擇用Hugo的原因就是因為它安裝簡單生成快速
+我這裡只記錄怎麼用Hugo製作靜態網站跟我遇到的問題
+其他更詳細的內容請再上網搜尋
+"/>
 
 
 
@@ -106,15 +118,63 @@
         <a href="https://podw.github.io/github.io/post/learn_hugo_01/">Hugo 學習日誌01</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-12-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/github.io/tags/hugo">Hugo</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-12-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/github.io/tags/hugo">Hugo</a>&nbsp;<a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD">網站架設</a>&nbsp;</span>
 
     </div>
     
     
     <div class="post-content markdown-body">
-        <p>hugo server -&gt; 運行Hugo虛擬server來顯示目前的網頁</p></p>
+        <blockquote>
+<p>本站是透過<strong>Hugo</strong>這個靜態網站生成器製作而成的<br>
+網路上還有其他的靜態網站生成器<br>
+而我會選擇用<strong>Hugo</strong>的原因就是因為它安裝簡單生成快速<br>
+我這裡只記錄怎麼用<strong>Hugo</strong>製作靜態網站跟我遇到的問題<br>
+其他更詳細的內容請再上網搜尋</p>
+</blockquote>
+<h2 id="一安裝-hugo">(一)安裝 <strong>Hugo</strong></h2>
+<blockquote>
+<p>說是安裝<strong>Hugo</strong>其實只需要一個<strong>hugo.exe</strong>就可以執行<br>
+所以只要去  <a href="https://gohugo.io/getting-started/installing" target="_blank"><strong>Hugo官網下載</strong></a>  符合你電腦環境的執行檔就好</p></p>
+</blockquote>
+<p><img class="img-zoomable" src="/github.io/image/Learn_Hugo/DownLoadHugo01.png" alt="官網畫面" />
+</p>
+<blockquote>
+<p>我是在<code>Windows10</code> <strong>x64</strong>系統環境下所以是載</p>
+</blockquote>
+<h4 id="hugo_extended_cite07901cite_windows-64bitzip">hugo_extended_<cite>(0.79.0)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite>_Windows-64bit.zip</h4>
+<blockquote>
+<p>將檔案解壓縮後就會得到一個 <strong>hugo.exe</strong><br>
+其實現在就可以執行<strong>Hugo</strong>了，但是只能在目前解壓縮出來的目錄下<br>
+為了之後執行方便我建議把修改<cite>環境變數 <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite><br>
+讓<strong>Windows PowerShell</strong>或<strong>Cmd</strong>不管在哪都可執行<strong>Hugo</strong><br></p>
+</blockquote>
+<p><img class="img-zoomable" src="/github.io/image/Learn_Hugo/DownLoadHugo02.png" alt="環境變數位置" />
+
+<img class="img-zoomable" src="/github.io/image/Learn_Hugo/DownLoadHugo03.png" alt="新增環境變數" />
+</p>
+<blockquote>
+<p>照著圖片操作最後按下確認就完成<strong>Hugo</strong>的安裝<br>
+這時候可以打開<strong>Cmd</strong>來確認，執行<strong>hugo  version</strong><br>
+可以看到版號就代表成功了</p>
+</blockquote>
+<p><img class="img-zoomable" src="/github.io/image/Learn_Hugo/DownLoadHugo04.png" alt="CMD驗證" />
+</p>
+<h2 id="二創建一網站">(二)創建一網站</h2>
+<p>hugo server -&gt; 運行本機的server來顯示目前的網頁</p></p>
 <p>hugo new site 名稱 -&gt; 創建一個新的網站</p></p>
 <p>hugo new post/文章標題.md -&gt; 創建一個新的文章</p></p>
+<p>hugo -&gt; 將目前製作的網頁輸出成 html</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>看目前<strong>Hugo</strong>最新是哪一版 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>(Windows)作業系統會依照<strong>PATH</strong>環境變數中所設定的路徑順序，依序尋找各路徑可以執行命令的執行檔 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
     </div>
 </article>
 
@@ -167,14 +227,6 @@
         <div>
             
             <span>
-                <a href="/github.io/tags/css/">css</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/html/">html</a>
-            </span>
-            
-            <span>
                 <a href="/github.io/tags/hugo/">Hugo</a>
             </span>
             
@@ -183,11 +235,7 @@
             </span>
             
             <span>
-                <a href="/github.io/tags/themes/">themes</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/%E9%9B%9C%E8%AB%87/">雜談</a>
+                <a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD/">網站架設</a>
             </span>
             
         </div>
@@ -255,14 +303,6 @@
         <div>
             
             <span>
-                <a href="/github.io/tags/css/">css</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/html/">html</a>
-            </span>
-            
-            <span>
                 <a href="/github.io/tags/hugo/">Hugo</a>
             </span>
             
@@ -271,11 +311,7 @@
             </span>
             
             <span>
-                <a href="/github.io/tags/themes/">themes</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/%E9%9B%9C%E8%AB%87/">雜談</a>
+                <a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD/">網站架設</a>
             </span>
             
         </div>

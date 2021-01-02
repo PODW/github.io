@@ -13,7 +13,13 @@
       <pubDate>Tue, 29 Dec 2020 23:57:35 +0800</pubDate>
       
       <guid>https://podw.github.io/github.io/post/learn_hugo_01/</guid>
-      <description></description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本站是透過&lt;strong&gt;Hugo&lt;/strong&gt;這個靜態網站生成器製作而成的&lt;br&gt;
+網路上還有其他的靜態網站生成器&lt;br&gt;
+而我會選擇用&lt;strong&gt;Hugo&lt;/strong&gt;的原因就是因為它安裝簡單生成快速&lt;br&gt;
+我這裡只記錄怎麼用&lt;strong&gt;Hugo&lt;/strong&gt;製作靜態網站跟我遇到的問題&lt;br&gt;
+其他更詳細的內容請再上網搜尋&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

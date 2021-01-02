@@ -29,7 +29,7 @@
 <meta name="description" content="紀錄如何使用Markdown來寫網頁內容" />
 
 
-<meta name="keywords" content="雜談, Markdown" />
+<meta name="keywords" content="Markdown, 網站架設" />
 
 <meta property="og:title" content="第一篇文章" />
 <meta property="og:description" content="紀錄如何使用Markdown來寫網頁內容" />
@@ -106,7 +106,7 @@
         <a href="https://podw.github.io/github.io/post/first_post/">第一篇文章</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-12-27</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/github.io/tags/%E9%9B%9C%E8%AB%87">雜談</a>&nbsp;<a href="/github.io/tags/markdown">Markdown</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-12-27</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/github.io/tags/markdown">Markdown</a>&nbsp;<a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD">網站架設</a>&nbsp;</span>
 
     </div>
     
@@ -125,16 +125,18 @@
 <h2 id="標記文字方式透過-註解--粗體-或-斜體">標記文字方式透過 <code>註解</code> , <code>粗體</code> 或 <code>斜體</code></h2>
 <h4 id="文字中標記方式">文字中標記方式</h4>
 <blockquote>
-<p>文字要分行時，可以用HTML的 <code>&lt;/p&gt;</code></p>
-用 <strong>星號</strong> 標記粗體，用 <em>底線</em> 來標註斜體，注意底線不要跟前後文字相連</p>
+<p>文字要分段時，可以用HTML的 <code>&lt;/p&gt;</code></p>
+文字要換行時，可以用HTML的 <code>&lt;br&gt;</code><br>
+文字中要插入 空 白 鍵 時，可以用HTML的 <code>&amp;nbsp;</code><br>
+用 <strong>星號</strong> 標記粗體，用 <em>底線</em> 來標註斜體，注意底線不要跟前後文字相連<br>
 同時要用 <strong><em>粗斜體</em></strong> 時，星號一定要加在底線外</p>
 </blockquote>
 <h4 id="標記註解的方式">標記註解的方式</h4>
 <blockquote>
-<p>透過 <code>&lt;cite&gt;</code> 跟 <code>&lt;/cite&gt;</code> 將想要註解的文字夾起來，並在裡面用 <cite> 中括號<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite> 來決定註解代號</p>
-但是要注意代號不等於右上 <cite>註解<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite> 的數字，而是要配對註解用的</p>
+<p>透過 <code>&lt;cite&gt;</code> 跟 <code>&lt;/cite&gt;</code> 將想要註解的文字夾起來，並在裡面用 <cite>中括號 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite> 來決定註解代號<br>
+但是要注意代號不等於右上 <cite>註解 <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></cite> 的數字，而是要配對註解用的</p>
 </blockquote>
-<p>表格</p>
+<h2 id="表格">表格</h2>
 <table>
 <thead>
 <tr>
@@ -157,20 +159,99 @@
 </tr>
 </tbody>
 </table>
-<p>本地圖片(注意圖片名不能有空格)
-<img class="img-zoomable" src="/image/New_Year.jpg" alt="新年" />
+<p>表格中也能用前面介紹的文字標記</p></p>
+<table>
+<thead>
+<tr>
+<th>Online</th>
+<th>Markdown</th>
+<th>In</th>
+<th>Table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>斜體</em></td>
+<td><strong>粗體</strong></td>
+<td><del>刪除線</del></td>
+<td><code>標記</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="列目錄">列目錄</h2>
+<h4 id="cite數字目錄nbsp2cite"><cite>數字目錄 <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></cite></h4>
+<ol>
+<li>第一個項目</li>
+<li>第二個項目</li>
+<li>第三個項目</li>
+</ol>
+<h4 id="純目錄">純目錄</h4>
+<ul>
+<li>一個物件</li>
+<li>另一個物件</li>
+<li>再一個物件</li>
+</ul>
+<h4 id="混和目錄">混和目錄</h4>
+<ul>
+<li>一個物件</li>
+</ul>
+<ol start="2">
+<li>第二個目錄</li>
+<li>我不是三</li>
+</ol>
+<ul>
+<li>
+<ol start="4">
+<li>羅馬數字目錄</li>
+</ol>
+</li>
+</ul>
+<ol start="7">
+<li>第三個目錄</li>
+</ol>
+<h2 id="程式顯示">程式顯示</h2>
+<pre><code class="language-html">html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Test&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-C">c 語言
+int a;
+int b;
+
+a = 1;
+b = 2;
+
+a = a + b;
+</code></pre>
+<h2 id="其他元素--abbr-sub-sup-kbd-mark">其他元素 — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> 文字說明</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>按下<kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> 來結束目前的程式</p>
+<p>重點會用<mark>螢光標示</mark>起來</p>
+<h2 id="圖片影片顯示">圖片&amp;影片顯示</h2>
+<h4 id="cite本地圖片nbsp3cite"><cite>本地圖片 <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></cite></h4>
+<p><img class="img-zoomable" src="/github.io/image/New_Year.jpg" alt="新年" />
 </p>
-<p>調整圖片大小
+<h4 id="調整圖片大小">調整圖片大小</h4>
 <figure>
-    <img src="/image/New_Year.jpg" width="50%"/> 
+    <img src="/github.io/image/New_Year.jpg" width="50%"/> 
 </figure>
+
+<h4 id="網路圖片">網路圖片</h4>
+<p><img class="img-zoomable" src="https://pbs.twimg.com/media/EqUV120UYAIJm9_.jpg" alt="黃金神威網路圖" />
 </p>
-<p>網路圖片
-<img class="img-zoomable" src="https://pbs.twimg.com/media/EqUV120UYAIJm9_.jpg" alt="黃金神威網路圖" />
-</p>
-<p>網頁超連結</p>
+<h4 id="網頁超連結">網頁超連結</h4>
 <p><a href="https://www.gamer.com.tw/" target="_blank">巴哈姆特</a></p>
-<p>YouTube 影片嵌入</p>
+<h4 id="youtube-影片嵌入">YouTube 影片嵌入</h4>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/c7vpcqA6SEQ?start=1700" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <section class="footnotes" role="doc-endnotes">
 <hr>
@@ -180,6 +261,12 @@
 </li>
 <li id="fn:2" role="doc-endnote">
 <p>註解的數字是自動按照順序排的，而且被註解的文字會自動變斜體 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>第一個數字決定從哪個數字開始數直到目錄結束，後面的目錄數字在Markdown不影響網頁顯示 <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>注意圖片名不能有空格 <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -235,14 +322,6 @@
         <div>
             
             <span>
-                <a href="/github.io/tags/css/">css</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/html/">html</a>
-            </span>
-            
-            <span>
                 <a href="/github.io/tags/hugo/">Hugo</a>
             </span>
             
@@ -251,11 +330,7 @@
             </span>
             
             <span>
-                <a href="/github.io/tags/themes/">themes</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/%E9%9B%9C%E8%AB%87/">雜談</a>
+                <a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD/">網站架設</a>
             </span>
             
         </div>
@@ -323,14 +398,6 @@
         <div>
             
             <span>
-                <a href="/github.io/tags/css/">css</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/html/">html</a>
-            </span>
-            
-            <span>
                 <a href="/github.io/tags/hugo/">Hugo</a>
             </span>
             
@@ -339,11 +406,7 @@
             </span>
             
             <span>
-                <a href="/github.io/tags/themes/">themes</a>
-            </span>
-            
-            <span>
-                <a href="/github.io/tags/%E9%9B%9C%E8%AB%87/">雜談</a>
+                <a href="/github.io/tags/%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD/">網站架設</a>
             </span>
             
         </div>
